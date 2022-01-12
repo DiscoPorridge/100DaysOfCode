@@ -48,4 +48,4 @@ winning = True
 
 # print("your score is " + str(score) + " " + str(height) + " " + str(winning))
 
-print(f"your score is {int(score)} and your height is {height} and it's {winning} that you are winning today 😊")
+print(f"your score is {score} and your height is {height} and it's {winning} that you are winning today 😊")
