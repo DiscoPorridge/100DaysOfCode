@@ -37,5 +37,6 @@ elif answer >= 18.5 and answer < 25:
 else:
     print(f"Your BMI is {answer}, you are underweight.")
 
-if answer >= 25 and answer < 30:
-    print("potato")
+
+# Refactor this later to get rid of the and conditions 
+# since that works and possibly more efficient (file size/execution speed with redundant check??)
