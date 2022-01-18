@@ -11,7 +11,9 @@ age = int(input("How old are you? \n"))
 if height >= 120:
     if age >= 18:
         print("You are tall enough to ride the rollercoaster, Tickets cost $12")
-    else:
+    elif age >= 12 and age < 18:
         print("You are tall enough to ride the rollercoaster, Tickets cost $7")
+    else:
+        print("You are tall enough to ride the rollercoaster, Tickets cost $5")
 else:
     print("You are not tall enough to ride the rollercoaster! :(")
