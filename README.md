@@ -2,7 +2,7 @@
 
 Hi!  
 
-This repo is tracking the progress of my #100DaysOfCode progress while learning Python.
+This repo is tracking the progress of my **#100DaysOfCode** progress while learning Python.
 
 Things to expect:
 
@@ -12,8 +12,8 @@ Things to expect:
   
 Things **not** to expect:
 
- - Code that's readable or even makes sense or follows best practices.
+ - Code that's readable, follows best practices or even makes sense.
  - Code that actually works - I think everyone knows the sheer amazement and panic of code working successfully on the first attempt.
  - The meaning of life.  
 
-I'm working through Angela Yu's 100 Days of Code Python course while studying at university.
+I'm working through Angela Yu's 100 Days of Code Python course alongside studying at university.
