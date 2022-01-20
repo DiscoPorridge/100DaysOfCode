@@ -1,6 +1,6 @@
-# Welcome to my #100DaysOfCode Repo
+# Welcome to my #100DaysOfCode Journey
 
-Hi!  
+Hi!  👋 
 
 This repo is tracking the progress of my **#100DaysOfCode** progress while learning Python.
 
