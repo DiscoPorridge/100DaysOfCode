@@ -15,25 +15,45 @@ extra_cheese = input("Do you want extra cheese? Y or N ")
 
 # extra cheese - +1
 
-
+# declare and set total to 0
 total = 0
+
+# if size == "S":
+#     total += 15
+#     if add_pepperoni == "Y":
+#         total += 2
+#     if extra_cheese == "Y":
+#         total += 1
+# elif size == "M":
+#     total += 20
+#     if add_pepperoni == "Y":
+#         total += 3
+#     if extra_cheese == "Y":
+#         total +1
+# else:
+#     total += 25
+#     if add_pepperoni == "Y":
+#         total += 3
+#     if extra_cheese == "Y":
+#         total +1
+# print(f"Your final bill is: ${total}.")
+
+# optimized calculations a bit
 
 if size == "S":
     total += 15
     if add_pepperoni == "Y":
         total += 2
-    if extra_cheese == "Y":
-        total += 1
 elif size == "M":
     total += 20
     if add_pepperoni == "Y":
         total += 3
-    if extra_cheese == "Y":
-        total +1
 else:
     total += 25
     if add_pepperoni == "Y":
         total += 3
-    if extra_cheese == "Y":
-        total +1
+if extra_cheese == "Y":
+    total += 1
+
+# output persons total cost for pizza choices
 print(f"Your final bill is: ${total}.")
