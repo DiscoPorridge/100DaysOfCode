@@ -1,4 +1,4 @@
-######## Tickets #######
+######## Tickets ########
 
 # blah = int(input("blah blah"))
 
