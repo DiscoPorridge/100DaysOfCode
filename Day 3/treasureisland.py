@@ -27,7 +27,7 @@ print("Your mission is to find the treasure.")
 
 #Write your code below this line 👇
 
-start = input("go left or right? \n").lower()
+start = input("You\'re at a crossroad, go left or right? \n").lower()
 
 print(f"You have selected {start}")
 
