@@ -6,22 +6,32 @@ name2 = input("What is their name? \n")
 
 #Write your code below this line 👇
 
-# converting both names to lowercase and declaring and setting true and love variable to 0
-lower1 = name1.lower()
-lower2 = name2.lower()
+combined = name1 + name2
+combined_lower = combined.lower()
 true = 0
 love = 0
 
-
-# limiting this to the functions suggested, checking each name for occurance of certain letters
-true = lower1.count("t") + lower1.count("r") + lower1.count("u") + lower1.count("e")
-love = lower1.count("l") + lower1.count("o") + lower1.count("v") + lower1.count("e")
-
-true += lower2.count("t") + lower2.count("r") + lower2.count("u") + lower2.count("e")
-love += lower2.count("l") + lower2.count("o") + lower2.count("v") + lower2.count("e")
+true = combined_lower.count("t") + combined_lower.count("r") + combined_lower.count("u") + combined_lower.count("e")
+love = combined_lower.count("l") + combined_lower.count("o") + combined_lower.count("v") + combined_lower.count("e")
 
 
-# combining result of previous step and converting to an integer
+
+# # converting both names to lowercase and declaring and setting true and love variable to 0
+# lower1 = name1.lower()
+# lower2 = name2.lower()
+# true = 0
+# love = 0
+
+
+# # limiting this to the functions suggested, checking each name for occurance of certain letters
+# true = lower1.count("t") + lower1.count("r") + lower1.count("u") + lower1.count("e")
+# love = lower1.count("l") + lower1.count("o") + lower1.count("v") + lower1.count("e")
+
+# true += lower2.count("t") + lower2.count("r") + lower2.count("u") + lower2.count("e")
+# love += lower2.count("l") + lower2.count("o") + lower2.count("v") + lower2.count("e")
+
+
+# # combining result of previous step and converting to an integer
 score = int(f"{true}{love}")
 
 
