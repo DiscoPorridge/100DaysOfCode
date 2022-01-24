@@ -2,7 +2,7 @@
 
 Hi!  👋 
 
-This repo is tracking the progress of my **#100DaysOfCode** progress while learning Python.
+This repo is tracking my progress learning Python during the **#100DaysOfCode** challenge.
 
 Things to expect:
 
