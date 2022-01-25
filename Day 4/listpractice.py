@@ -3,13 +3,26 @@ states_of_america = ["Delaware", "Pennsylvania", "New Jersey", "Georgia", "Conne
 
 dirty_dozen = ["Strawberries", "Spinach", "Kale", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears", "Tomatoes", "Celery", "Potatoes"]
 
+print(len(states_of_america))
 
-states_of_america[1] = "pencilvania"
+print(states_of_america[49])
 
-states_of_america.append("Potato")
+# print(states_of_america[50])
 
-states_of_america.extend(["potato2", "Potato3", "potato4"])
+numofstates = len(states_of_america)
 
-print(states_of_america[1])
+print(states_of_america[numofstates -2]) 
 
-print(states_of_america[-1])
+fruits = ["Strawberries", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears"]
+vegetables = ["Spinach", "Kale", "Tomatoes", "Celery", "Potatoes"]
+
+dirty = [fruits, vegetables, "potato"]
+
+dirty2 = [dirty, "blah", "blah"]
+
+print(dirty2)
+
+
+
+# print(dirty)
+# print(fruits)
