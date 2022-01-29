@@ -48,18 +48,18 @@ cpu = random.randint(0, 2)
 
 # working out who won and displaying results
 if player < 0 or player > 2:
-    print("You enetered an invalid hand, you lose by default")
-
-elif (player == 0 and cpu == 0) or (player == 1 and cpu == 1) or (player == 2 and cpu == 2):
-    print(f"You picked {hand_text[player]} \n {hands[player]}")
-    print(f"CPU picked {hand_text[cpu]} \n {hands[cpu]}")
-    print(f"You both picked {hand_text[player]}, It's a draw! 😲")
-
-elif (player == 0 and cpu == 2) or (player == 1 and cpu == 0) or (player == 2 and cpu == 1):
-    print(f"You picked {hand_text[player]} \n {hands[player]}")
-    print(f"CPU picked {hand_text[cpu]} \n {hands[cpu]}")
-    print(f"{hand_text[player]} beats {hand_text[cpu]}, You win! 🥳")
+    print("You entered an invalid hand, you lose by default")
 else:
-    print(f"You picked {hand_text[player]} \n {hands[player]}")
-    print(f"CPU picked {hand_text[cpu]} \n {hands[cpu]}")
-    print(f"{hand_text[cpu]} beats {hand_text[player]}, You lost 😥")
+    if (player == 0 and cpu == 0) or (player == 1 and cpu == 1) or (player == 2 and cpu == 2):
+        print(f"You picked {hand_text[player]} \n {hands[player]}")
+        print(f"CPU picked {hand_text[cpu]} \n {hands[cpu]}")
+        print(f"You both picked {hand_text[player]}, It's a draw! 😲")
+
+    elif (player == 0 and cpu == 2) or (player == 1 and cpu == 0) or (player == 2 and cpu == 1):
+        print(f"You picked {hand_text[player]} \n {hands[player]}")
+        print(f"CPU picked {hand_text[cpu]} \n {hands[cpu]}")
+        print(f"{hand_text[player]} beats {hand_text[cpu]}, You win! 🥳")
+    else:
+        print(f"You picked {hand_text[player]} \n {hands[player]}")
+        print(f"CPU picked {hand_text[cpu]} \n {hands[cpu]}")
+        print(f"{hand_text[cpu]} beats {hand_text[player]}, You lost 😥")
