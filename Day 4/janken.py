@@ -47,8 +47,10 @@ player = int(input("Pick a hand, Type 1 for Rock, 2 for Paper or 3 for Scissors"
 cpu = random.randint(0, 2)
 
 # working out who won and displaying results
+if player < 0 or player > 2:
+    print("You enetered an invalid hand, you lose by default")
 
-if (player == 0 and cpu == 0) or (player == 1 and cpu == 1) or (player == 2 and cpu == 2):
+elif (player == 0 and cpu == 0) or (player == 1 and cpu == 1) or (player == 2 and cpu == 2):
     print(f"You picked {hand_text[player]} \n {hands[player]}")
     print(f"CPU picked {hand_text[cpu]} \n {hands[cpu]}")
     print(f"You both picked {hand_text[player]}, It's a draw! 😲")
