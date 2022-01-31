@@ -20,8 +20,7 @@ print(f" {min(student_scores)} min()")
 # maximum score without max()
 
 # temp = 0
-max_score = 0
-min_score = 0
+max_score = student_scores[0]
 
 # highest score without max()
 for scores in student_scores:
@@ -29,10 +28,11 @@ for scores in student_scores:
     if scores > max_score:
         max_score = scores
 
+min_score = max_score
 
-# terrible lowest score without min()
+# terrible lowest score without min() 
 for scores in student_scores:
-    if scores < student_scores[+1]:
+    if scores < min_score:
         min_score = scores
 
 # display highest score and lowest score
