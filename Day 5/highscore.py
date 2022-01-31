@@ -11,10 +11,10 @@ print(student_scores)
 
 #Write your code below this row 👇
 
-# print maximum score in list
+# print highest score in list
 print(f" {max(student_scores)} max()")
 
-# print minimum score in list
+# print lowest score in list
 print(f" {min(student_scores)} min()")
 
 # maximum score without max()
@@ -23,16 +23,18 @@ print(f" {min(student_scores)} min()")
 max_score = 0
 min_score = 0
 
-# max score without max()
+# highest score without max()
 for scores in student_scores:
     # temp = x
     if scores > max_score:
         max_score = scores
-print(f"The highest score in the class is: {max_score}")
 
 
-# terrible min score without min()
+# terrible lowest score without min()
 for scores in student_scores:
     if scores < student_scores[+1]:
         min_score = scores
-print(f"minimum score {min_score}")
+
+# display highest score and lowest score
+print(f"The highest score in the class is: {max_score}")
+print(f"The lowest score in the class is: {min_score}")
