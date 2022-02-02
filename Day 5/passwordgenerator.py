@@ -18,21 +18,21 @@ random.seed(random.randint(2197172813311000729512343216125642781, 90000000000000
 #e.g. 4 letter, 2 symbol, 2 number = JduE&!91
 
 # loops requested amount of letters and adds random letters to password
-for potato in range(nr_letters):
+for letter in range(nr_letters):
     password += letters[random.randint(0, 51)]
 
 # I think initialising seed() before each loop will increase the randomness of output ...🤔
 random.seed(random.randint(2197172813311000729512343216125642781, 90000000000000000006160000000000000000009))
 
 # loops requested amount of symbols and adds random symbols to end of letters
-for potato in range(nr_symbols):
+for symbol in range(nr_symbols):
     password+= symbols[random.randint(0, 8)]
 
 # same as above
 random.seed(random.randint(2197172813311000729512343216125642781, 90000000000000000006160000000000000000009))
 
 # loops requested amount of numbers and adds random numbers to end of symbols
-for potato in range(nr_numbers):
+for number in range(nr_numbers):
     password += numbers[random.randint(0, 9)]
 
 # outputs generated password with users requirements
@@ -41,3 +41,4 @@ print(f"generated password: {password}")
 
 #Hard Level - Order of characters randomised:
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
+
