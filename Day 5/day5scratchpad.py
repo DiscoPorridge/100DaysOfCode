@@ -61,3 +61,11 @@ random.seed(random.randint(2197172813311000729512343216125642781, 90000000000000
 # print(random.random())
 
 # print(random.random())
+
+
+s = "0123456789"
+s[2]
+s[4:6]
+s[:6]
+s[4:]
+print(s[random.randint(0, len(s))])
