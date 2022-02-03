@@ -36,9 +36,34 @@ for number in range(nr_numbers):
     password += numbers[random.randint(0, 9)]
 
 # outputs generated password with users requirements
-print(f"generated password: {password}")
+print(f"Your Password: {password}")
+
+
 
 
 #Hard Level - Order of characters randomised:
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
 
+password_hard = []
+password_hard_output = ""
+
+random.seed()
+
+
+for letter in range(nr_letters):
+    password_hard += letters[random.randint(0, 51)]
+
+for symbol in range(nr_symbols):
+    password_hard.append(symbols[random.randint(0, 8)])
+
+for number in range(nr_numbers):
+    password_hard.append(numbers[random.randint(0, 9)])
+
+
+# Does invoking seed every loop increase the randomness of shuffle() 🤔
+for password in password_hard:
+    random.seed(random.randint(2197172813311000729512343216125642781, 90000000000000000006160000000000000000009))
+    random.shuffle(password_hard)
+    password_hard_output += password
+
+print(f"Your password: \n {password_hard_output}")
