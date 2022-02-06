@@ -61,30 +61,43 @@ if player_total == 21:
     print(f"Dealer hand: {cpu_hand[0]} {cpu_hand[1]}")
 
 hit = input("Do you want to [H]it or [S]tand?")
-
-if hit == "S" or hit == "s":
+if hit == "H" or hit == "h":
+    while hit == "H" or hit == "h":
+        print("You have decided to Hit")
+        print(f"Your hand is {player_hand}")
+        player_hand.append(deck[random.randint(0, len(deck) - 1)])
+        player_total += int(player_hand[-1])
+        print(f"You pulled {player_hand[-1]}")
+        print(f"Your hand is {player_hand} (Total: {player_total})")
+        if player_total > 21:
+            hit = "B"
+        else:
+            hit = input("Do you want to [H]it again or [S]tand?")
+print(hit)
+while hit == "S" or hit == "s":
     print("You have decided to Stand")
     print(f"Dealers hand is {cpu_hand[0]} {cpu_hand[1]}")
+    while cpu_total < 17:
+        print(f"Dealers hand is {cpu_hand}")
+        print(f"Dealer Hits")
+        cpu_hand.append(deck[random.randint(0, len(deck) - 1)])
+        cpu_total += int(cpu_hand[-1])
+        deck.remove(cpu_hand[-1])
+        print(f"Dealer pulled {cpu_hand[-1]}")
 
+    if cpu_total > 21:
+        print("Dealer went bust!")
 
-    if cpu_total > 17:
+    elif cpu_total >= 17:
         print("Dealer stands")
         if cpu_total > player_total:
-            print(f"You have {player_hand[0]} and {player_hand[1]} (Total: {player_total} and Dealer has {cpu_hand[0]} and {cpu_hand[1]} (Total: {cpu_total}")
-            print("You lost")
+            print(f"Dealer won with the hand: {cpu_hand} (Total: {cpu_total}")
+        elif player_total > cpu_total:
+            print(f"You won with the hand: {player_hand} (Total: {player_total}")
         else:
-            print("You Won!")
-            print(f"You have {player_hand[0]} and {player_hand[1]} (Total: {player_total} and Dealer has {cpu_hand[0]} and {cpu_hand[1]} (Total: {cpu_total}")
-
-    else:
-        while cpu_total < 17:
-            cpu_hand.append(deck[random.randint(0, len(deck) - 1)])
-
-
-
-        if cpu_total > 21:
-            print("You won, Dealer went Bust")
-
+            print(f"You drew with the hand: {player_hand} (Total: {player_total}) and Dealer hand: {cpu_hand} (Total: {cpu_total}")
+if hit == "B":
+    print("You went bust")
 # ask if they want to stand or hit
 
 # loop draw new card and remove from deck if user hits until stand/bust
