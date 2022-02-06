@@ -58,8 +58,32 @@ print(f"Your hand is {player_hand[0]} and {player_hand[1]} (Total: {player_total
 
 if player_total == 21:
     print(f"You got BlackJack ({player_hand[0]} {player_hand[1]})")
+    print(f"Dealer hand: {cpu_hand[0]} {cpu_hand[1]}")
 
-# if user has blackjack, win game
+hit = input("Do you want to [H]it or [S]tand?")
+
+if hit == "S" or hit == "s":
+    print("You have decided to Stand")
+    print(f"Dealers hand is {cpu_hand[0]} {cpu_hand[1]}")
+
+
+    if cpu_total > 17:
+        print("Dealer stands")
+        if cpu_total > player_total:
+            print(f"You have {player_hand[0]} and {player_hand[1]} (Total: {player_total} and Dealer has {cpu_hand[0]} and {cpu_hand[1]} (Total: {cpu_total}")
+            print("You lost")
+        else:
+            print("You Won!")
+            print(f"You have {player_hand[0]} and {player_hand[1]} (Total: {player_total} and Dealer has {cpu_hand[0]} and {cpu_hand[1]} (Total: {cpu_total}")
+
+    else:
+        while cpu_total < 17:
+            cpu_hand.append(deck[random.randint(0, len(deck) - 1)])
+
+
+
+        if cpu_total > 21:
+            print("You won, Dealer went Bust")
 
 # ask if they want to stand or hit
 
