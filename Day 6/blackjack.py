@@ -24,6 +24,7 @@ print("Blackjack Trainer v0.1")
 player_hand.append(deck[random.randint(0, len(deck) - 1)])
 deck.remove(player_hand[0])
 player_total += int(player_hand[0])
+print(f"First card: {player_hand[0]}")
 
 # shuffle deck
 random.shuffle(deck)
@@ -32,6 +33,8 @@ random.shuffle(deck)
 player_hand.append(deck[random.randint(0, len(deck) - 1)])
 player_total += int(player_hand[1])
 deck.remove(player_hand[1])
+print(f"Second card: {player_hand[1]}")
+
 
 # shuffle deck
 random.shuffle(deck)
@@ -40,6 +43,7 @@ random.shuffle(deck)
 cpu_hand.append(deck[random.randint(0, len(deck) - 1)])
 cpu_total += int(cpu_hand[0])
 deck.remove(cpu_hand[0])
+print(f"Dealer face up card: {cpu_hand[0]}")
 
 # shuffle deck
 random.shuffle(deck)
@@ -48,20 +52,12 @@ random.shuffle(deck)
 cpu_hand.append(deck[random.randint(0, len(deck) - 1)])
 cpu_total += int(cpu_hand[1])
 deck.remove(cpu_hand[1])
+print(f"Dealer face down card")
 
-print(player_hand)
-print(player_total)
-print(cpu_hand)
-print(cpu_total)
+print(f"Your hand is {player_hand[0]} and {player_hand[1]} (Total: {player_total})")
 
-
-# issue players second card and remove card from deck
-
-# display cards to user
-
-# issue cpu face up card
-
-# display face up card and face down card
+if player_total == 21:
+    print(f"You got BlackJack ({player_hand[0]} {player_hand[1]})")
 
 # if user has blackjack, win game
 
